@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1917EFEE9D9EC5ABE620F2DE65476554"
-               BuildableName = "Pods_InvadeSpace.framework"
-               BlueprintName = "Pods-InvadeSpace"
+               BlueprintIdentifier = "037FAF0781A1AB70D33B3157C6405C77"
+               BuildableName = "Device_swift.framework"
+               BlueprintName = "Device.swift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1917EFEE9D9EC5ABE620F2DE65476554"
-            BuildableName = "Pods_InvadeSpace.framework"
-            BlueprintName = "Pods-InvadeSpace"
+            BlueprintIdentifier = "037FAF0781A1AB70D33B3157C6405C77"
+            BuildableName = "Device_swift.framework"
+            BlueprintName = "Device.swift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

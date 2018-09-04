@@ -1,16 +1,20 @@
 PODS:
+  - Device.swift (1.1.2)
   - lottie-ios (2.5.0)
 
 DEPENDENCIES:
+  - Device.swift
   - lottie-ios
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Device.swift
     - lottie-ios
 
 SPEC CHECKSUMS:
+  Device.swift: f5ff884087c13999505b3a6b2ff1104fb6923f93
   lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
 
-PODFILE CHECKSUM: 817e21a5f4213c3a89f0709c4549f4941d4b5de0
+PODFILE CHECKSUM: bf20e0c17915104aaae2c6260fbeee4f2b2c956c
 
 COCOAPODS: 1.5.3

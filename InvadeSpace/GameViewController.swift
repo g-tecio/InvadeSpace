@@ -10,16 +10,23 @@ import UIKit
 import SpriteKit
 import GameplayKit
 import Lottie
-
+import Device_swift
 
 class GameViewController: UIViewController {
     var value:Double = 1.0
     var timerIntro = Timer()
-    let intro = LOTAnimationView(name: "IntroInvade_Space")
+    let deviceType = UIDevice.current.deviceType
+    var intro = LOTAnimationView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.isUserInteractionEnabled = false
+        
+        if deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini ||  UIDevice.current.userInterfaceIdiom == .phone{
+             intro = LOTAnimationView(name: "IntroInvade_Space")
+        }else{
+            intro = LOTAnimationView(name: "IntroInvade_SpaceIpad")
+        }
         
         intro.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         intro.contentMode = .scaleAspectFill
@@ -43,10 +50,7 @@ class GameViewController: UIViewController {
             view.ignoresSiblingOrder = true
             view.showsFPS = false
             view.showsNodeCount = false
-        }
-        
-        
-        
+        } 
     }
     
     @objc func introTimer() {

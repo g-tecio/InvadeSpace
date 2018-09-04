@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import Device_swift
 
 class MenuScene: SKScene {
     
@@ -18,6 +19,7 @@ class MenuScene: SKScene {
     var logoNode:SKSpriteNode!
     var seconds:Int = 0
     var scoreLabel:SKLabelNode!
+    let deviceType = UIDevice.current.deviceType
     
     override func didMove(to view: SKView) {
         
@@ -42,8 +44,15 @@ class MenuScene: SKScene {
         secondsText.insert(separator: "   ", every: 1)
         scoreLabel.text=String(secondsText)
         self.addChild(scoreLabel)
+
         
-        menuBackgroundNode.texture = SKTexture(imageNamed: "background")
+        if deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini ||  UIDevice.current.userInterfaceIdiom == .phone {
+          menuBackgroundNode.texture = SKTexture(imageNamed: "background")
+            
+        }else{
+          menuBackgroundNode.texture = SKTexture(imageNamed: "backgroundIpad")
+        }
+ 
         menuBackgroundNode.zPosition = 2
         menuBackgroundNode.position = CGPoint(x: self.frame.size.width*5/10, y: self.size.height*5/10)
         menuBackgroundNode.size = CGSize(width: self.frame.size.width, height: self.frame.size.height)
@@ -52,16 +61,15 @@ class MenuScene: SKScene {
         logoNode = SKSpriteNode(imageNamed: "Logo")
         logoNode.zPosition = 6
         logoNode.position = CGPoint(x: frame.size.width / 2, y: frame.size.height * 0.80)
-        logoNode.size = CGSize(width:(logoNode.size.width)*(frame.size.width/logoNode.size.width),  height: frame.size.height * 0.12)
+
         self.addChild(logoNode)
         
         newGameButtonNode = SKSpriteNode(imageNamed: "menuButton")
         newGameButtonNode.zPosition = 4
         newGameButtonNode.name = "newGameButton"
         newGameButtonNode.position = CGPoint(x: self.frame.size.width*5/10, y: self.size.height*1/10)
-        newGameButtonNode.size = CGSize(width:(newGameButtonNode.size.width)*(frame.size.width/newGameButtonNode.size.width * 0.21),  height: frame.size.height * 0.12)
+
         self.addChild(newGameButtonNode)
-        
         
         kmScore = SKSpriteNode(imageNamed: "kmScore")
         kmScore.zPosition = 4
@@ -74,27 +82,55 @@ class MenuScene: SKScene {
         lifeBar.size = CGSize(width:(lifeBar.size.width)*(frame.size.width/lifeBar.size.width * 0.12),  height: frame.size.height * 0.050)
         lifeBar.position = CGPoint(x: self.frame.size.width / 1.10, y: lifeBar.size.height / 1.70)
         self.addChild(lifeBar)
-
-    }
-    
-    func startSound() -> SKAction {
-        return SKAction.repeat(SKAction.playSoundFileNamed("start4.wav", waitForCompletion: false), count: 1)
+        
+        if deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini ||  UIDevice.current.userInterfaceIdiom == .phone {
+            logoNode.size = CGSize(width:(logoNode.size.width)*(frame.size.width/logoNode.size.width),  height: frame.size.height * 0.12)
+            newGameButtonNode.size = CGSize(width:(newGameButtonNode.size.width)*(frame.size.width/newGameButtonNode.size.width * 0.21),  height: frame.size.height * 0.12)
+        }else{
+            logoNode.size = CGSize(width:(logoNode.size.width)*(frame.size.width/logoNode.size.width),  height: frame.size.height * 0.15)
+            newGameButtonNode.size = CGSize(width:(newGameButtonNode.size.width)*(frame.size.width/newGameButtonNode.size.width * 0.19),  height: frame.size.height * 0.14)
+            newGameButtonNode.position = CGPoint(x: self.frame.size.width*5/10, y: self.size.height*0.90/10)
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touches = touches.first
-        
         if let location = touches?.location(in: self){
             
             let nodesArray = self.nodes(at:location)
             if nodesArray.first?.name == "newGameButton" {
+           
+                
+                if deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini ||  UIDevice.current.userInterfaceIdiom == .phone {
+                    newGameButtonNode.size = CGSize(width:(newGameButtonNode.size.width)*(frame.size.width/newGameButtonNode.size.width * 0.19),  height: frame.size.height * 0.11)
+                }else{
+                    newGameButtonNode.size = CGSize(width:(newGameButtonNode.size.width)*(frame.size.width/newGameButtonNode.size.width * 0.16),  height: frame.size.height * 0.12)
+                }
+                
+            }
+        }
+
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touches = touches.first
+        if let location = touches?.location(in: self){
+            
+            if deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini ||  UIDevice.current.userInterfaceIdiom == .phone {
+                                newGameButtonNode.size = CGSize(width:(newGameButtonNode.size.width)*(frame.size.width/newGameButtonNode.size.width * 0.21),  height: frame.size.height * 0.12)
+            }else{
+                                newGameButtonNode.size = CGSize(width:(newGameButtonNode.size.width)*(frame.size.width/newGameButtonNode.size.width * 0.19),  height: frame.size.height * 0.14)
+            }
+
+            let nodesArray = self.nodes(at:location)
+            if nodesArray.first?.name == "newGameButton" {
+
                 let transition = SKTransition.flipHorizontal(withDuration: 0.5)
                 // let transition = SKTransition.fade(with: UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0), duration: 4.5)
                 let gameScene = GameScene(size: self.size)
                 
-                self.run(self.startSound(),completion: {
-                    self.view?.presentScene(gameScene, transition: transition)
-                })
+                self.view?.presentScene(gameScene, transition: transition)
+                
             }
         }
     }
