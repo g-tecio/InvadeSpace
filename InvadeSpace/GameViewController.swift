@@ -2,9 +2,8 @@
 //  GameViewController.swift
 //  InvadeSpace
 //
-//  Created by Herbeyg Robledo Reyes on 8/28/18.
+//  Created by Cartwheel Galaxy on 5/04/18.
 //  Copyright © 2018 Cartwheel Galaxy. All rights reserved.
-//
 
 import UIKit
 import SpriteKit
@@ -64,12 +63,12 @@ class GameViewController: UIViewController {
     }
     
     override var shouldAutorotate: Bool {
-        return true
+        return false
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
+            return .portrait
         } else {
             return .all
         }

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		23D32784BE53C424F9196056 /* Pods_InvadeSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2A8FB347025AEFCC479D748 /* Pods_InvadeSpace.framework */; };
+		9A5F67ED2140207500FDA04B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A5F67EC2140207500FDA04B /* GoogleService-Info.plist */; };
+		9A5F67EF214026A400FDA04B /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5F67EE214026A400FDA04B /* GameKit.framework */; };
+		9A5F67F1214026AB00FDA04B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5F67F0214026AB00FDA04B /* StoreKit.framework */; };
 		DE05D556213D7C9E00F4A045 /* bigStars.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE05D555213D7C9E00F4A045 /* bigStars.sks */; };
 		DE05D558213D7CA400F4A045 /* mediumStars.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE05D557213D7CA400F4A045 /* mediumStars.sks */; };
 		DE05D55A213D7CA800F4A045 /* smallStars.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE05D559213D7CA800F4A045 /* smallStars.sks */; };
@@ -60,6 +63,9 @@
 
 /* Begin PBXFileReference section */
 		87506C344CB95A621E9136D0 /* Pods-InvadeSpace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvadeSpace.release.xcconfig"; path = "Pods/Target Support Files/Pods-InvadeSpace/Pods-InvadeSpace.release.xcconfig"; sourceTree = "<group>"; };
+		9A5F67EC2140207500FDA04B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9A5F67EE214026A400FDA04B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		9A5F67F0214026AB00FDA04B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DE05D555213D7C9E00F4A045 /* bigStars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = bigStars.sks; sourceTree = "<group>"; };
 		DE05D557213D7CA400F4A045 /* mediumStars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = mediumStars.sks; sourceTree = "<group>"; };
 		DE05D559213D7CA800F4A045 /* smallStars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = smallStars.sks; sourceTree = "<group>"; };
@@ -119,7 +125,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A5F67F1214026AB00FDA04B /* StoreKit.framework in Frameworks */,
 				23D32784BE53C424F9196056 /* Pods_InvadeSpace.framework in Frameworks */,
+				9A5F67EF214026A400FDA04B /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +137,8 @@
 		B59CFE8161A401238A8A811E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A5F67F0214026AB00FDA04B /* StoreKit.framework */,
+				9A5F67EE214026A400FDA04B /* GameKit.framework */,
 				F2A8FB347025AEFCC479D748 /* Pods_InvadeSpace.framework */,
 			);
 			name = Frameworks;
@@ -164,6 +174,7 @@
 		DE5056E32135D53400985097 /* InvadeSpace */ = {
 			isa = PBXGroup;
 			children = (
+				9A5F67EC2140207500FDA04B /* GoogleService-Info.plist */,
 				DE5057352135D92C00985097 /* Animations */,
 				DE5056E42135D53400985097 /* AppDelegate.swift */,
 				DE5056EC2135D53400985097 /* GameViewController.swift */,
@@ -299,6 +310,14 @@
 				TargetAttributes = {
 					DE5056E02135D53400985097 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -327,6 +346,7 @@
 			files = (
 				DE9CC6D4213EFDAC0046422E /* Build_5png.png in Resources */,
 				DE9CC6D3213EFDAC0046422E /* Build_4png.png in Resources */,
+				9A5F67ED2140207500FDA04B /* GoogleService-Info.plist in Resources */,
 				DE50572F2135D92600985097 /* F-Build_3_1x.png in Resources */,
 				DE5057102135D80600985097 /* bigClouds.sks in Resources */,
 				DE9CC6D1213EFDAC0046422E /* Build_2.png in Resources */,
@@ -401,12 +421,22 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-InvadeSpace/Pods-InvadeSpace-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Device.swift/Device_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -568,15 +598,17 @@
 			baseConfigurationReference = EDCF768045B2EBFFEF64D7F1 /* Pods-InvadeSpace.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CD84N9QP66;
+				DEVELOPMENT_TEAM = 745E977PLG;
 				INFOPLIST_FILE = InvadeSpace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cartwheelgalaxy.games.InvadeSpace;
+				PRODUCT_BUNDLE_IDENTIFIER = com.guadianatechnologygames.invadespace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -587,15 +619,17 @@
 			baseConfigurationReference = 87506C344CB95A621E9136D0 /* Pods-InvadeSpace.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CD84N9QP66;
+				DEVELOPMENT_TEAM = 745E977PLG;
 				INFOPLIST_FILE = InvadeSpace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cartwheelgalaxy.games.InvadeSpace;
+				PRODUCT_BUNDLE_IDENTIFIER = com.guadianatechnologygames.invadespace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

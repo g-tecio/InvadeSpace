@@ -2,11 +2,12 @@
 //  AppDelegate.swift
 //  InvadeSpace
 //
-//  Created by Herbeyg Robledo Reyes on 8/28/18.
+//  Created by Cartwheel Galaxy on 5/04/18.
 //  Copyright © 2018 Cartwheel Galaxy. All rights reserved.
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+         FirebaseApp.configure()
         return true
     }
 

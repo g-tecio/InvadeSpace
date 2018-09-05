@@ -7,5 +7,8 @@ target 'InvadeSpace' do
   pod 'Device.swift'
   pod 'lottie-ios'
   # Pods for InvadeSpace
+  pod 'Firebase/Core'
+  pod 'FirebaseAnalytics'
+  pod 'Firebase/Performance'
 
 end

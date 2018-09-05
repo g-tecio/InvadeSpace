@@ -2,13 +2,13 @@
 //  MenuScene.swift
 //  InvadeSpace
 //
-//  Created by Herbeyg Robledo Reyes on 8/28/18.
+//  Created by Cartwheel Galaxy on 5/04/18.
 //  Copyright © 2018 Cartwheel Galaxy. All rights reserved.
 //
 
 import SpriteKit
 import Device_swift
-
+import Firebase
 class MenuScene: SKScene {
     
     var newGameButtonNode = SKSpriteNode()
@@ -99,7 +99,7 @@ class MenuScene: SKScene {
             
             let nodesArray = self.nodes(at:location)
             if nodesArray.first?.name == "newGameButton" {
-           
+           Analytics.logEvent("NewGame", parameters: nil)
                 
                 if deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini ||  UIDevice.current.userInterfaceIdiom == .phone {
                     newGameButtonNode.size = CGSize(width:(newGameButtonNode.size.width)*(frame.size.width/newGameButtonNode.size.width * 0.19),  height: frame.size.height * 0.11)

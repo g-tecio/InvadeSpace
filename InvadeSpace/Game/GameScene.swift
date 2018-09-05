@@ -2,10 +2,9 @@
 //  GameScene.swift
 //  InvadeSpace
 //
-//  Created by Herbeyg Robledo Reyes on 8/28/18.
+//  Created by Cartwheel Galaxy on 5/04/18.
 //  Copyright © 2018 Cartwheel Galaxy. All rights reserved.
 //
-
 struct Number {
     static let withSeparator: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -863,6 +862,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         self.timer.invalidate()
 
                         self.run(self.deathSound(),completion: {
+                     
                             self.view?.presentScene(menuScene, transition: transition)
                         })
                         
