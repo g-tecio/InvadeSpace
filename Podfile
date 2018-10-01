@@ -10,5 +10,7 @@ target 'InvadeSpace' do
   pod 'Firebase/Core'
   pod 'FirebaseAnalytics'
   pod 'Firebase/Performance'
+  pod 'Firebase/AdMob'
+  pod 'Google-Mobile-Ads-SDK'
 
 end

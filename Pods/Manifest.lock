@@ -1,5 +1,8 @@
 PODS:
   - Device.swift (1.1.2)
+  - Firebase/AdMob (5.7.0):
+    - Firebase/Core
+    - Google-Mobile-Ads-SDK (~> 7.32)
   - Firebase/Core (5.7.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 5.1.1)
@@ -31,6 +34,7 @@ PODS:
     - GoogleUtilities/MethodSwizzler (~> 5.2.0)
     - GTMSessionFetcher/Core (~> 1.1)
     - Protobuf (~> 3.5)
+  - Google-Mobile-Ads-SDK (7.33.1)
   - GoogleAppMeasurement (5.1.1):
     - GoogleUtilities/AppDelegateSwizzler (~> 5.2.0)
     - GoogleUtilities/MethodSwizzler (~> 5.2.0)
@@ -70,9 +74,11 @@ PODS:
 
 DEPENDENCIES:
   - Device.swift
+  - Firebase/AdMob
   - Firebase/Core
   - Firebase/Performance
   - FirebaseAnalytics
+  - Google-Mobile-Ads-SDK
   - lottie-ios
 
 SPEC REPOS:
@@ -83,6 +89,7 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseInstanceID
     - FirebasePerformance
+    - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleToolboxForMac
     - GoogleUtilities
@@ -98,6 +105,7 @@ SPEC CHECKSUMS:
   FirebaseCore: 3a97432acb324b439fbed338e642f9cbb516a63d
   FirebaseInstanceID: ea5af6920d0a4a29b40459d055bebe4a6c1333c4
   FirebasePerformance: e732cd3fe9488c68bf2e9ae7a55672e873d0c55a
+  Google-Mobile-Ads-SDK: 71c6d3e8d8f52673fa5a83fc0d027623b11fde16
   GoogleAppMeasurement: f7507b39b70ad0bd80b3d81518b2f43868974307
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GoogleUtilities: 6f681e27050c5e130325e89fa0316dfca826f954
@@ -106,6 +114,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
-PODFILE CHECKSUM: 6b24fee1479108a45435f5e415822831627515f5
+PODFILE CHECKSUM: c5f9631a59afa540ff5de35fea9f9ee565d20101
 
 COCOAPODS: 1.5.3

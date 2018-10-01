@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		23D32784BE53C424F9196056 /* Pods_InvadeSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2A8FB347025AEFCC479D748 /* Pods_InvadeSpace.framework */; };
-		9A5F67ED2140207500FDA04B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A5F67EC2140207500FDA04B /* GoogleService-Info.plist */; };
+		5F2698842154050000D65F0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F2698832154050000D65F0B /* GoogleService-Info.plist */; };
 		9A5F67EF214026A400FDA04B /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5F67EE214026A400FDA04B /* GameKit.framework */; };
 		9A5F67F1214026AB00FDA04B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5F67F0214026AB00FDA04B /* StoreKit.framework */; };
 		DE05D556213D7C9E00F4A045 /* bigStars.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE05D555213D7C9E00F4A045 /* bigStars.sks */; };
@@ -62,8 +62,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F2698832154050000D65F0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		87506C344CB95A621E9136D0 /* Pods-InvadeSpace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvadeSpace.release.xcconfig"; path = "Pods/Target Support Files/Pods-InvadeSpace/Pods-InvadeSpace.release.xcconfig"; sourceTree = "<group>"; };
-		9A5F67EC2140207500FDA04B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9A5F67EE214026A400FDA04B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		9A5F67F0214026AB00FDA04B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DE05D555213D7C9E00F4A045 /* bigStars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = bigStars.sks; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 		DE5056E32135D53400985097 /* InvadeSpace */ = {
 			isa = PBXGroup;
 			children = (
-				9A5F67EC2140207500FDA04B /* GoogleService-Info.plist */,
+				5F2698832154050000D65F0B /* GoogleService-Info.plist */,
 				DE5057352135D92C00985097 /* Animations */,
 				DE5056E42135D53400985097 /* AppDelegate.swift */,
 				DE5056EC2135D53400985097 /* GameViewController.swift */,
@@ -346,7 +346,7 @@
 			files = (
 				DE9CC6D4213EFDAC0046422E /* Build_5png.png in Resources */,
 				DE9CC6D3213EFDAC0046422E /* Build_4png.png in Resources */,
-				9A5F67ED2140207500FDA04B /* GoogleService-Info.plist in Resources */,
+				5F2698842154050000D65F0B /* GoogleService-Info.plist in Resources */,
 				DE50572F2135D92600985097 /* F-Build_3_1x.png in Resources */,
 				DE5057102135D80600985097 /* bigClouds.sks in Resources */,
 				DE9CC6D1213EFDAC0046422E /* Build_2.png in Resources */,

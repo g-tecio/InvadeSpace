@@ -10,16 +10,24 @@ import SpriteKit
 import GameplayKit
 import Lottie
 import Device_swift
+import GoogleMobileAds
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, GADBannerViewDelegate  {
     var value:Double = 1.0
     var timerIntro = Timer()
     let deviceType = UIDevice.current.deviceType
     var intro = LOTAnimationView()
     
+    //banner definition
+    var bannerView: GADBannerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.isUserInteractionEnabled = false
+        
+        showAds()
+        removeads()
+        showAds()
         
         if deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini ||  UIDevice.current.userInterfaceIdiom == .phone{
              intro = LOTAnimationView(name: "IntroInvade_Space")
@@ -82,4 +90,77 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+   //function to display the banner
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .top,
+                                relatedBy: .equal,
+                                toItem: topLayoutGuide,
+                                attribute: .bottom,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+            ])
+    }
+    
+    func showAds(){
+        //add banner to a subview and request it
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        bannerView.adUnitID = "ca-app-pub-5267056163100832/5401230956"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView.delegate = self
+        //present banner
+        addBannerViewToView(bannerView)
+    }
+    
+    func removeads() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+        self.bannerView.removeFromSuperview()
+        }
+    }
+    
+    /// Tells the delegate an ad request loaded an ad.
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("adViewDidReceiveAd")
+    }
+    
+    /// Tells the delegate an ad request failed.
+    func adView(_ bannerView: GADBannerView,
+                didFailToReceiveAdWithError error: GADRequestError) {
+        print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+    
+    /// Tells the delegate that a full-screen view will be presented in response
+    /// to the user clicking on an ad.
+    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+        print("adViewWillPresentScreen")
+    }
+    
+    /// Tells the delegate that the full-screen view will be dismissed.
+    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+        print("adViewWillDismissScreen")
+    }
+    
+    /// Tells the delegate that the full-screen view has been dismissed.
+    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+        print("adViewDidDismissScreen")
+    }
+    
+    /// Tells the delegate that a user click will open another app (such as
+    /// the App Store), backgrounding the current app.
+    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+        print("adViewWillLeaveApplication")
+    }
+    
 }

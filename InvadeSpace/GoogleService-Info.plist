@@ -7,34 +7,34 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>996907202522-7p7oh8cndlea21345ht11itdb5d8vckq.apps.googleusercontent.com</string>
+	<string>398112098907-e8gn8hgs9m6tkm212s8lq4md98kv702i.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.996907202522-7p7oh8cndlea21345ht11itdb5d8vckq</string>
+	<string>com.googleusercontent.apps.398112098907-e8gn8hgs9m6tkm212s8lq4md98kv702i</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCuCLvsm39cYqPhNegYXL0xPBj8bvWAQYU</string>
+	<string>AIzaSyCHgGcYSMejFlXm_Vpb7kf7hWnrjj11Z-A</string>
 	<key>GCM_SENDER_ID</key>
-	<string>996907202522</string>
+	<string>398112098907</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.guadianatechnologygames.invadespace</string>
 	<key>PROJECT_ID</key>
-	<string>guadianatecnologia</string>
+	<string>game-invade-space</string>
 	<key>STORAGE_BUCKET</key>
-	<string>guadianatecnologia.appspot.com</string>
+	<string>game-invade-space.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
 	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false></false>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
 	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:996907202522:ios:3eb05d817a0a091b</string>
+	<string>1:398112098907:ios:3eb05d817a0a091b</string>
 	<key>DATABASE_URL</key>
-	<string>https://guadianatecnologia.firebaseio.com</string>
+	<string>https://game-invade-space.firebaseio.com</string>
 </dict>
 </plist>
