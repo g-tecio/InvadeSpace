@@ -125,7 +125,7 @@ class MenuScene: SKScene {
             let nodesArray = self.nodes(at:location)
             if nodesArray.first?.name == "newGameButton" {
 
-                let transition = SKTransition.flipHorizontal(withDuration: 0.5)
+                let transition = SKTransition.fade(with: UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0), duration: 4.5)
                 // let transition = SKTransition.fade(with: UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0), duration: 4.5)
                 let gameScene = GameScene(size: self.size)
                 
