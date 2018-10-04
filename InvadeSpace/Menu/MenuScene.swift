@@ -129,6 +129,8 @@ class MenuScene: SKScene {
                 // let transition = SKTransition.fade(with: UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0), duration: 4.5)
                 let gameScene = GameScene(size: self.size)
                 
+                //bannerView.removeFromSuperview()
+                bannerView.isHidden = true
                 self.view?.presentScene(gameScene, transition: transition)
                 
             }

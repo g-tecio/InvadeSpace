@@ -12,21 +12,23 @@ import Lottie
 import Device_swift
 import GoogleMobileAds
 
+
+//banner definition
+var bannerView: GADBannerView!
+
 class GameViewController: UIViewController, GADBannerViewDelegate  {
     var value:Double = 1.0
     var timerIntro = Timer()
     let deviceType = UIDevice.current.deviceType
     var intro = LOTAnimationView()
+    var contador: Int = 0
     
-    //banner definition
-    var bannerView: GADBannerView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.isUserInteractionEnabled = false
         
-        showAds()
-        removeads()
         showAds()
         
         if deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini ||  UIDevice.current.userInterfaceIdiom == .phone{
@@ -42,8 +44,11 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
             
             self.timerIntro = Timer.scheduledTimer(timeInterval: 0.10, target: self, selector: #selector(self.introTimer), userInfo: nil, repeats: true)
         }
-        
+        print("ESTE ES EL CONTADOR", (contador))
         if let view = self.view as! SKView? {
+            
+            
+           
             // Load the SKScene from 'GameScene.sks'
             
             if let scene = SKScene(fileNamed: "MenuScene") {
@@ -125,9 +130,9 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
     }
     
     func removeads() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
-        self.bannerView.removeFromSuperview()
-        }
+        
+       bannerView.removeFromSuperview()
+        
     }
     
     /// Tells the delegate an ad request loaded an ad.
