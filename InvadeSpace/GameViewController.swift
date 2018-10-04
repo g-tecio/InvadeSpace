@@ -29,7 +29,14 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
         super.viewDidLoad()
         self.view.isUserInteractionEnabled = false
         
-        showAds()
+        //add banner to a subview and request it
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        bannerView.adUnitID = "ca-app-pub-5267056163100832/5401230956"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView.delegate = self
+        //present banner
+        addBannerViewToView(bannerView)
         
         if deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini ||  UIDevice.current.userInterfaceIdiom == .phone{
              intro = LOTAnimationView(name: "IntroInvade_Space")
@@ -116,23 +123,6 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
                                 multiplier: 1,
                                 constant: 0)
             ])
-    }
-    
-    func showAds(){
-        //add banner to a subview and request it
-        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        bannerView.adUnitID = "ca-app-pub-5267056163100832/5401230956"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
-        bannerView.delegate = self
-        //present banner
-        addBannerViewToView(bannerView)
-    }
-    
-    func removeads() {
-        
-       bannerView.removeFromSuperview()
-        
     }
     
     /// Tells the delegate an ad request loaded an ad.
