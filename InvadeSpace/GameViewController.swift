@@ -39,9 +39,9 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
         addBannerViewToView(bannerView)
         
         if deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini ||  UIDevice.current.userInterfaceIdiom == .phone{
-             intro = LOTAnimationView(name: "IntroInvade_Space")
+             intro = LOTAnimationView(name: "Intro_iPhone")
         }else{
-            intro = LOTAnimationView(name: "IntroInvade_SpaceIpad")
+            intro = LOTAnimationView(name: "Intro_iPad")
         }
         
         intro.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
