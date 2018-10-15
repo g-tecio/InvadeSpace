@@ -58,6 +58,8 @@
 		F4C527172170F72900C94732 /* Cloud2.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C5270C2170F72800C94732 /* Cloud2.png */; };
 		F4C527182170F72900C94732 /* Cloud3.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C5270D2170F72800C94732 /* Cloud3.png */; };
 		F4C5271A2170F72900C94732 /* Cloud1png.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C5270F2170F72900C94732 /* Cloud1png.png */; };
+		F4D4B3B92174E841001E9C99 /* Launch_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = F4D4B3B72174E840001E9C99 /* Launch_iPhone.png */; };
+		F4D4B3BA2174E841001E9C99 /* Launch_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F4D4B3B82174E841001E9C99 /* Launch_iPad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +118,8 @@
 		F4C5270C2170F72800C94732 /* Cloud2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cloud2.png; sourceTree = "<group>"; };
 		F4C5270D2170F72800C94732 /* Cloud3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cloud3.png; sourceTree = "<group>"; };
 		F4C5270F2170F72900C94732 /* Cloud1png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cloud1png.png; sourceTree = "<group>"; };
+		F4D4B3B72174E840001E9C99 /* Launch_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launch_iPhone.png; sourceTree = "<group>"; };
+		F4D4B3B82174E841001E9C99 /* Launch_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launch_iPad.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +272,8 @@
 			children = (
 				F4C526EB2170F6CE00C94732 /* Intro_iPhone.json */,
 				F4C527032170F71000C94732 /* Intro_iPad.json */,
+				F4D4B3B82174E841001E9C99 /* Launch_iPad.png */,
+				F4D4B3B72174E840001E9C99 /* Launch_iPhone.png */,
 				DE50571C2135D92500985097 /* images */,
 			);
 			path = Animations;
@@ -351,6 +357,7 @@
 				DE5057072135D7BA00985097 /* shootSFX.wav in Resources */,
 				DE5056E72135D53400985097 /* GameScene.sks in Resources */,
 				DE50570F2135D80600985097 /* mediumClouds.sks in Resources */,
+				F4D4B3B92174E841001E9C99 /* Launch_iPhone.png in Resources */,
 				DE5057122135D80600985097 /* smallClouds.sks in Resources */,
 				F4C526FF2170F6DC00C94732 /* F-Build_2_1x.png in Resources */,
 				F4C526F82170F6DC00C94732 /* Cloud2_1X.png in Resources */,
@@ -360,6 +367,7 @@
 				DE05D55A213D7CA800F4A045 /* smallStars.sks in Resources */,
 				DE5057092135D7CD00985097 /* start4.wav in Resources */,
 				F4C5271A2170F72900C94732 /* Cloud1png.png in Resources */,
+				F4D4B3BA2174E841001E9C99 /* Launch_iPad.png in Resources */,
 				F4C527122170F72900C94732 /* Build_1.png in Resources */,
 				F4C526FD2170F6DC00C94732 /* F-Build_1_1x.png in Resources */,
 				F4C527112170F72900C94732 /* Build_4png.png in Resources */,
