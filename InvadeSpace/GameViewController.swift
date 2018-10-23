@@ -29,14 +29,24 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
         super.viewDidLoad()
         self.view.isUserInteractionEnabled = false
         
+     
         //add banner to a subview and request it
-        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+                if deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini ||  UIDevice.current.userInterfaceIdiom == .phone {
+                       bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+                    
+                }else{
+                       bannerView = GADBannerView(adSize: kGADAdSizeLeaderboard)
+        }
+        
+     
         bannerView.adUnitID = "ca-app-pub-5267056163100832/5401230956"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         bannerView.delegate = self
         //present banner
         addBannerViewToView(bannerView)
+ 
+
         
         if deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini ||  UIDevice.current.userInterfaceIdiom == .phone{
              intro = LOTAnimationView(name: "Intro_iPhone")
@@ -58,17 +68,32 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
            
             // Load the SKScene from 'GameScene.sks'
             
-            if let scene = SKScene(fileNamed: "MenuScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
+            if puzzleSolved == false{
+                if let scene = SKScene(fileNamed: "ParentalGate") {
+                    // Set the scale mode to scale to fit the window
+                    scene.scaleMode = .aspectFill
+                    
+                    // Present the scene
+                    view.presentScene(scene)
+                    bannerView.isHidden = true
+                }
+            }else{
+                if let scene = SKScene(fileNamed: "MenuScene") {
+                    // Set the scale mode to scale to fit the window
+                    scene.scaleMode = .aspectFill
+                    
+                    // Present the scene
+                    view.presentScene(scene)
+                    
+                    bannerView.isHidden = false
+                }
                 
-                // Present the scene
-                view.presentScene(scene)
             }
-            
-            view.ignoresSiblingOrder = true
-            view.showsFPS = false
-            view.showsNodeCount = false
+
+            //view.ignoresSiblingOrder = true
+            //view.showsFPS = false
+            //view.showsNodeCount = false
+            //view.showsPhysics = true
         } 
     }
     

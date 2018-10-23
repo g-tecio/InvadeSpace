@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16974A97217F7AD500C2898D /* ParentalGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16974A96217F7AD500C2898D /* ParentalGate.swift */; };
+		16974A99217F7B1F00C2898D /* ParentalGate.sks in Resources */ = {isa = PBXBuildFile; fileRef = 16974A98217F7B1F00C2898D /* ParentalGate.sks */; };
 		23D32784BE53C424F9196056 /* Pods_InvadeSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2A8FB347025AEFCC479D748 /* Pods_InvadeSpace.framework */; };
 		5F2698842154050000D65F0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F2698832154050000D65F0B /* GoogleService-Info.plist */; };
 		9A5F67EF214026A400FDA04B /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5F67EE214026A400FDA04B /* GameKit.framework */; };
@@ -63,6 +65,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16974A96217F7AD500C2898D /* ParentalGate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentalGate.swift; sourceTree = "<group>"; };
+		16974A98217F7B1F00C2898D /* ParentalGate.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ParentalGate.sks; sourceTree = "<group>"; };
 		5F2698832154050000D65F0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		87506C344CB95A621E9136D0 /* Pods-InvadeSpace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvadeSpace.release.xcconfig"; path = "Pods/Target Support Files/Pods-InvadeSpace/Pods-InvadeSpace.release.xcconfig"; sourceTree = "<group>"; };
 		9A5F67EE214026A400FDA04B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -136,6 +140,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16974A9A217F7B2C00C2898D /* Parental Gate */ = {
+			isa = PBXGroup;
+			children = (
+				16974A96217F7AD500C2898D /* ParentalGate.swift */,
+				16974A98217F7B1F00C2898D /* ParentalGate.sks */,
+			);
+			path = "Parental Gate";
+			sourceTree = "<group>";
+		};
 		B59CFE8161A401238A8A811E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,9 +190,10 @@
 			isa = PBXGroup;
 			children = (
 				5F2698832154050000D65F0B /* GoogleService-Info.plist */,
-				DE5057352135D92C00985097 /* Animations */,
 				DE5056E42135D53400985097 /* AppDelegate.swift */,
 				DE5056EC2135D53400985097 /* GameViewController.swift */,
+				16974A9A217F7B2C00C2898D /* Parental Gate */,
+				DE5057352135D92C00985097 /* Animations */,
 				DE5057192135D89F00985097 /* Menu */,
 				DE5057142135D84000985097 /* Game */,
 				DE5057132135D80F00985097 /* Emmiters */,
@@ -359,6 +373,7 @@
 				DE50570F2135D80600985097 /* mediumClouds.sks in Resources */,
 				F4D4B3B92174E841001E9C99 /* Launch_iPhone.png in Resources */,
 				DE5057122135D80600985097 /* smallClouds.sks in Resources */,
+				16974A99217F7B1F00C2898D /* ParentalGate.sks in Resources */,
 				F4C526FF2170F6DC00C94732 /* F-Build_2_1x.png in Resources */,
 				F4C526F82170F6DC00C94732 /* Cloud2_1X.png in Resources */,
 				DE5057372135EA5B00985097 /* novem___.ttf in Resources */,
@@ -455,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE5056EB2135D53400985097 /* GameScene.swift in Sources */,
+				16974A97217F7AD500C2898D /* ParentalGate.swift in Sources */,
 				DE5057162135D88400985097 /* MenuScene.swift in Sources */,
 				DE5056ED2135D53400985097 /* GameViewController.swift in Sources */,
 				DE5056E52135D53400985097 /* AppDelegate.swift in Sources */,
