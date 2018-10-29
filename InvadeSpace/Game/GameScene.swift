@@ -864,7 +864,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         self.run(self.deathSound(),completion: {
                             
                             DispatchQueue.main.asyncAfter(deadline: .now() + 2.55) {
-                                bannerView.isHidden = false
+                                bannerView.isHidden = true
                             }
                             self.view?.presentScene(menuScene, transition: transition)
                         })

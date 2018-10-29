@@ -379,7 +379,7 @@ class ParentalGate: SKScene, SKPhysicsContactDelegate {
             parentalGate.scaleMode = SKSceneScaleMode.fill
             self.view!.presentScene(parentalGate, transition: transition)
             
-            bannerView.isHidden = false
+            bannerView.isHidden = true
             square.texture = SKTexture(imageNamed:"circleInside")
             circle.isHidden = true
             puzzleSolved = true

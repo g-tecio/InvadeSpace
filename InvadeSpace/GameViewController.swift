@@ -64,31 +64,39 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
         print("ESTE ES EL CONTADOR", (contador))
         if let view = self.view as! SKView? {
             
-            
+            if let scene = SKScene(fileNamed: "MenuScene") {
+                // Set the scale mode to scale to fit the window
+                scene.scaleMode = .aspectFill
+                
+                // Present the scene
+                view.presentScene(scene)
+                
+                bannerView.isHidden = true
+            }
            
             // Load the SKScene from 'GameScene.sks'
             
-            if puzzleSolved == false{
-                if let scene = SKScene(fileNamed: "ParentalGate") {
-                    // Set the scale mode to scale to fit the window
-                    scene.scaleMode = .aspectFill
-                    
-                    // Present the scene
-                    view.presentScene(scene)
-                    bannerView.isHidden = true
-                }
-            }else{
-                if let scene = SKScene(fileNamed: "MenuScene") {
-                    // Set the scale mode to scale to fit the window
-                    scene.scaleMode = .aspectFill
-                    
-                    // Present the scene
-                    view.presentScene(scene)
-                    
-                    bannerView.isHidden = false
-                }
-                
-            }
+//            if puzzleSolved == false{
+//                if let scene = SKScene(fileNamed: "ParentalGate") {
+//                    // Set the scale mode to scale to fit the window
+//                    scene.scaleMode = .aspectFill
+//
+//                    // Present the scene
+//                    view.presentScene(scene)
+//                    bannerView.isHidden = true
+//                }
+//            }else{
+//                if let scene = SKScene(fileNamed: "MenuScene") {
+//                    // Set the scale mode to scale to fit the window
+//                    scene.scaleMode = .aspectFill
+//
+//                    // Present the scene
+//                    view.presentScene(scene)
+//
+//                    bannerView.isHidden = false
+//                }
+//
+//            }
 
             //view.ignoresSiblingOrder = true
             //view.showsFPS = false
