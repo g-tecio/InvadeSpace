@@ -11,8 +11,6 @@
 		16974A99217F7B1F00C2898D /* ParentalGate.sks in Resources */ = {isa = PBXBuildFile; fileRef = 16974A98217F7B1F00C2898D /* ParentalGate.sks */; };
 		23D32784BE53C424F9196056 /* Pods_InvadeSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2A8FB347025AEFCC479D748 /* Pods_InvadeSpace.framework */; };
 		5F2698842154050000D65F0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F2698832154050000D65F0B /* GoogleService-Info.plist */; };
-		9A5F67EF214026A400FDA04B /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5F67EE214026A400FDA04B /* GameKit.framework */; };
-		9A5F67F1214026AB00FDA04B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5F67F0214026AB00FDA04B /* StoreKit.framework */; };
 		DE05D556213D7C9E00F4A045 /* bigStars.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE05D555213D7C9E00F4A045 /* bigStars.sks */; };
 		DE05D558213D7CA400F4A045 /* mediumStars.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE05D557213D7CA400F4A045 /* mediumStars.sks */; };
 		DE05D55A213D7CA800F4A045 /* smallStars.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE05D559213D7CA800F4A045 /* smallStars.sks */; };
@@ -69,8 +67,6 @@
 		16974A98217F7B1F00C2898D /* ParentalGate.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ParentalGate.sks; sourceTree = "<group>"; };
 		5F2698832154050000D65F0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		87506C344CB95A621E9136D0 /* Pods-InvadeSpace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvadeSpace.release.xcconfig"; path = "Pods/Target Support Files/Pods-InvadeSpace/Pods-InvadeSpace.release.xcconfig"; sourceTree = "<group>"; };
-		9A5F67EE214026A400FDA04B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		9A5F67F0214026AB00FDA04B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DE05D555213D7C9E00F4A045 /* bigStars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = bigStars.sks; sourceTree = "<group>"; };
 		DE05D557213D7CA400F4A045 /* mediumStars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = mediumStars.sks; sourceTree = "<group>"; };
 		DE05D559213D7CA800F4A045 /* smallStars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = smallStars.sks; sourceTree = "<group>"; };
@@ -131,9 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A5F67F1214026AB00FDA04B /* StoreKit.framework in Frameworks */,
 				23D32784BE53C424F9196056 /* Pods_InvadeSpace.framework in Frameworks */,
-				9A5F67EF214026A400FDA04B /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,8 +146,6 @@
 		B59CFE8161A401238A8A811E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9A5F67F0214026AB00FDA04B /* StoreKit.framework */,
-				9A5F67EE214026A400FDA04B /* GameKit.framework */,
 				F2A8FB347025AEFCC479D748 /* Pods_InvadeSpace.framework */,
 			);
 			name = Frameworks;
@@ -329,10 +321,10 @@
 						CreatedOnToolsVersion = 9.4.1;
 						SystemCapabilities = {
 							com.apple.GameCenter.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.InAppPurchase = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};

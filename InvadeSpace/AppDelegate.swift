@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         puzzleSolved = oldPuzzleSolved
         
          FirebaseApp.configure()
-        
+        try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+        try? AVAudioSession.sharedInstance().setActive(true)
         // Initialize the Google Mobile Ads SDK.
    GADMobileAds.configure(withApplicationID: "ca-app-pub-5267056163100832~7480599389")
         return true
